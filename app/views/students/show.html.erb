@@ -13,6 +13,7 @@
   </thead>
   <tbody>
     <% @student.classlists.each do |classlist| %>
+    
       <tr>
         <td><%= classlist.section.subject.name %></td>
         <td><%= classlist.section.name %></td>
