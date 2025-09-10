@@ -3,7 +3,9 @@
 <%= render @subject %>
 
 <% @subject.sections.each do | section | %>
-<h3> Section: <%=section.name %> Room <%=section.room %> Time Slot <%=section.time_slot %></h3>
+<h3> Section: <%= section.name %><br> 
+Room: <%= section.room %> <br> 
+Time Slot: <%= section.time_slot %><br> </h3>
 <table>
   <thead>
     <tr>
@@ -13,7 +15,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @student.classlists.each do |classlist| %>
+    <% section.classlists.each do |classlist| %>
       <tr>
         <td><%= classlist.student.name %></td>
         <td><%= classlist.student.program %></td>
@@ -22,6 +24,7 @@
     <% end %>
   </tbody>
 </table>
+<% end %>
 <div>
   <%= link_to "Edit this subject", edit_subject_path(@subject) %> |
   <%= link_to "Back to subjects", subjects_path %>
