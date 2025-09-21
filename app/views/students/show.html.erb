@@ -9,6 +9,7 @@
       <th>Name</th>
       <th>Section</th>
       <th>Teacher</th>
+      <th>Number of Units</th>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +19,8 @@
         <td><%= classlist.section.subject.name %></td>
         <td><%= classlist.section.name %></td>
         <td><%= classlist.section.subject.teacher.name %></td>
+        <td><%= classlist.section.subject.number_of_units %></td>
+
       </tr>
     <% end %>
   </tbody>
